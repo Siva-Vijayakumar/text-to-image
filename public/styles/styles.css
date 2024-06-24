@@ -1,0 +1,110 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9fcfb;
+background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+  .logo{
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  main .search-form {
+    text-align: center; /* Center align form contents */
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .input-group label {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .input-group input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+  }
+  
+  .input-group button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-group button:hover {
+    background-color: #0056b3;
+  }
+  
+  .image-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 300px; /* Fixed height for image container */
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%; /* Ensure image fills container */
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  
+  .image p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+  

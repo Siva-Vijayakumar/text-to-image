@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Image Generator</title>
+  <link rel="stylesheet" href="styles/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <div class="container">
+    <img src="SILO.jpg" alt="" srcset="" class="logo">
+    <header>
+      <h1>Text to Image Generator</h1>
+      <p>Enter a description to generate an image</p>
+    </header>
+
+    <main>
+      <form action="/search" method="POST" class="search-form">
+        <div class="input-group">
+          <label for="query" class="sr-only">Search query</label>
+          <input type="text" id="query" name="query" placeholder="Enter text...">
+          <button type="submit" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M22.5 20.9l-5.2-5.2c1.1-1.4 1.7-3.1 1.7-4.9 0-4.7-3.8-8.5-8.5-8.5S1 6.1 1 10.8s3.8 8.5 8.5 8.5c1.8 0 3.5-0.6 4.9-1.7l5.2 5.2c0.3 0.3 0.7 0.5 1.1 0.5s0.8-0.2 1.1-0.5c0.6-0.6 0.6-1.5 0-2.1zM10.5 17.5c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"></path>
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <div class="image-results">
+        <% if (images && images.length > 0) { %>
+          <% images.forEach(image => { %>
+            <div class="image">
+              <img src="<%= image.imageUrl %>" alt="Generated Image">
+              <p>Photo by <a href="<%= image.photographerLink %>" target="_blank"><%= image.photographerName %></a></p>
+            </div>
+          <% }); %>
+        <% } else { %>
+          <p>No images found</p>
+        <% } %>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
